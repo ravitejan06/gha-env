@@ -10,11 +10,11 @@ on:
 jobs:
   test:
     env:
-      MONGODB_CLUSTER_ADDRESS: gha-demo.rdnet6v.mongodb.net
-      MONGODB_USERNAME: ravitejan
-      MONGODB_PASSWORD: Da00jA9jFRJ5Emjl
+      MONGODB_CLUSTER_ADDRESS: ${{secrets.MONGODB_CLUSTER_ADDRESS}}
+      MONGODB_USERNAME: ${{secrets.MONGODB_USERNAME}}
+      MONGODB_PASSWORD: ${{secrets.MONGODB_PASSWORD}}
       PORT: 8080
-    environment: testing
+    environment: Testing
     runs-on: ubuntu-latest
     steps:
       - name: Get Code
